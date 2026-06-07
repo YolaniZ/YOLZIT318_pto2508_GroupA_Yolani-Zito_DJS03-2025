@@ -1,0 +1,38 @@
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet (medium) */
+@media (max-width: 768px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .podcast-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  .podcast-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
