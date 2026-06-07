@@ -1,75 +1,102 @@
-# DJS03: React Podcast Landing Page
+🎙 React Podcast Landing Page
+A responsive landing page for discovering podcasts, built with React. The app fetches podcast data from an external API and displays a dynamic grid of podcast previews.
 
-## Overview
+🚀 Features
+Data Fetching from Podcast API
 
-In this project, you will build the landing page for a podcast discovery app using **React**. Your goal is to fetch podcast data from an external API and dynamically render a **responsive grid of podcast previews**. This project focuses on **data fetching**, **component structure**, **rendering logic**, and **layout styling**.
+Loading/Error States with clear user feedback
 
----
+Reusable Components for podcast previews
 
-## Core Objectives
+Responsive Grid Layout using CSS Grid
 
-- Fetch podcast data from an API: https://podcast-api.netlify.app/ on initial page load.
-- Display a loading indicator while data is being fetched, and handle errors or empty results with a clear user message.
-- Render a responsive **grid layout** of podcast previews using modular, reusable React components.
-- Pass podcast data into components via props and render each podcast card with the following:
-  - Podcast **image**
-  - Podcast **title**
-  - Number of **seasons**
-  - Associated **genre names**
-  - Formatted **last updated** date (e.g., "2 days ago")
-- Apply clean, consistent layout and styling across different screen sizes using CSS Grid or Flexbox.
-- Maintain high-quality, readable code with clear structure and **JSDoc comments** for key functions and components.
+Date Formatting with date-fns
 
----
+Clean, modular code with JSDoc documentation
 
-## Technical Requirements
+📂 Project Structure
+Code
+src/
+├── components/
+│   ├── PodcastPreviewCard.jsx   # Reusable podcast card
+│   └── LoadingSpinner.jsx       # Loading indicator
+├── App.jsx                      # Root component
+├── App.css                      # Global styles
+└── index.js                     # Entry point
+⚙️ Installation
+bash
+# Clone repository
+git clone https://github.com/your-username/podcast-landing.git
 
-- Use **React functional components**
-- Use the **Fetch API**
-- Use `useEffect()` to fetch data once on mount
-- Use `useState()` to manage podcast data
-- Use `.map()` to dynamically render PodcastPreviewCard components
-- Format dates using `date-fns` or a custom formatter
+# Navigate into project
+cd podcast-landing
 
----
+# Install dependencies
+npm install
 
-## Responsiveness Requirements
+# Start development server
+npm start
+🖼 Usage
+On initial load, the app fetches podcasts from the API.
 
-- Must look good on:
-  - Desktop (≥1200px)
-  - Tablet (~768px)
-  - Mobile (~375px)
-- Use **CSS Grid** or **Flexbox**
-- Media queries or frameworks like **Tailwind CSS** are allowed
+Displays a loading spinner while fetching.
 
----
+Shows error messages if the request fails.
 
-## Deliverables
+Renders a responsive grid of podcast previews:
 
-- **Functional React Application**
+Podcast image
 
-  - A working React app that fetches podcast data from an external API on initial load.
-  - The app renders a grid of podcast previews using reusable components.
+Title
 
-- **Loading, Error, and Empty States**
+Number of seasons
 
-  - A clear loading indicator is displayed while fetching data.
-  - Meaningful error or empty state messaging is shown if the fetch fails or returns no results.
+Genre tags
 
-- **Podcast Preview Card Component**
+Last updated date (e.g., “3 days ago”)
 
-  - A reusable component that displays:
-    - Podcast image
-    - Podcast title
-    - Number of seasons
-    - Genre tags
-    - Last updated date in a human-readable format (e.g., "3 days ago")
+📱 Responsiveness
+Desktop (≥1200px) → 4–5 cards per row
 
-- **Responsive Layout**
+Tablet (~768px) → 2–3 cards per row
 
-  - Grid layout that adapts to mobile, tablet, and desktop screen sizes using responsive design principles.
+Mobile (~375px) → 1 card per row
 
-- **Codebase**
-  - Clean, modular code with clearly separated components.
-  - All major functions and modules documented with **JSDoc** comments.
-  - Consistent formatting across JavaScript, JSX, HTML, and CSS files.
+Implemented with CSS Grid’s auto-fit and minmax() for seamless adaptation.
+
+🧩 Example Component
+jsx
+<PodcastPreviewCard podcast={podcast} />
+Props:
+
+image → Podcast cover
+
+title → Podcast name
+
+seasons → Number of seasons
+
+genres → Array of genre names
+
+updated → Last updated date
+
+📖 Documentation
+All major functions and components include JSDoc comments for clarity.
+
+Example:
+
+jsx
+/**
+ * PodcastPreviewCard component
+ * @param {Object} props - Component props
+ * @param {Object} props.podcast - Podcast data object
+ */
+✅ Deliverables Recap
+Functional React app with API integration
+
+Loading, error, and empty states
+
+Reusable podcast preview card component
+
+Responsive grid layout
+
+Documented, clean codebase
