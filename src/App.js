@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PodcastGrid from './components/PodcastGrid';
 import './App.css';
-import { genres } from '../data';
+import { genres } from './data';
 
 /**
  * Main App component that manages podcast data fetching and layout

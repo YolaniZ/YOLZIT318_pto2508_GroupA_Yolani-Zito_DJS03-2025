@@ -24,35 +24,37 @@ function PodcastPreviewCard({ podcast, genres }) {
 
   /**
    * Gets the genre names for this podcast
-   * @returns {Array} Array of genre title strings
+   * @returns {Array<string>} Array of genre title strings
    */
   const getGenreNames = () => {
-    if (!podcast.genres || podcast.genres.length === 0) {
+    if (!Array.isArray(podcast.genres) || podcast.genres.length === 0) {
       return [];
     }
 
     return podcast.genres
       .map((genreId) => {
-        const genre = genres.find((g) => g.id === genreId);
+        const genre = genres.find((g) => String(g.id) === String(genreId));
         return genre ? genre.title : null;
       })
       .filter((name) => name !== null);
   };
 
   const genreNames = getGenreNames();
-  const seasonCount = podcast.seasons ? podcast.seasons.length : 0;
+  const seasonCount = Array.isArray(podcast.seasons) ? podcast.seasons.length : 0;
+  const seasonLabel = `${seasonCount} ${seasonCount === 1 ? 'Season' : 'Seasons'}`;
+  const imageUrl = podcast.image || 'https://via.placeholder.com/400?text=Podcast';
 
   return (
     <div className="podcast-card">
       <div className="podcast-image-container">
         <img
-          src={podcast.image}
-          alt={podcast.title}
+          src={imageUrl}
+          alt={podcast.title || 'Podcast cover'}
           className="podcast-image"
           loading="lazy"
         />
         <div className="podcast-overlay">
-          <span className="season-badge">{seasonCount} Seasons</span>
+          <span className="season-badge">{seasonLabel}</span>
         </div>
       </div>
 
