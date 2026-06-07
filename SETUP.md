@@ -32,8 +32,10 @@ The app will automatically open in your default browser at `http://localhost:300
 ### 3. Build for Production
 When you're ready to deploy:
 ```bash
-npm build
+npm run build
 ```
+
+> Note: This is a Create React App project. Do not use Live Server to preview the app. Use `npm start` to run the React development server instead.
 
 ## Project Structure
 
