@@ -133,6 +133,29 @@
 }
 
 /* Responsive Design */
+@media (min-width: 1200px) {
+  .app-header {
+    padding: 2.5rem 2rem;
+  }
+
+  .header-content h1 {
+    font-size: 3rem;
+  }
+
+  .header-content p {
+    font-size: 1.15rem;
+  }
+
+  .app-main {
+    padding: 2.5rem 2rem;
+  }
+
+  .sort-controls {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .app-header {
     padding: 1.5rem 1rem;
@@ -147,12 +170,12 @@
   }
 
   .app-main {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.75rem;
   }
 
   .sort-controls {
     margin-bottom: 1.5rem;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 }
 
@@ -170,7 +193,7 @@
   }
 
   .app-main {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
   }
 
   .sort-controls {

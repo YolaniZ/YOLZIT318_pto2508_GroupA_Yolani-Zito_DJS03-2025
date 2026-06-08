@@ -218,4 +218,13 @@
   .podcast-title {
     font-size: 0.9rem;
   }
+
+  .genre-tag {
+    font-size: 0.62rem;
+    padding: 0.18rem 0.45rem;
+  }
+
+  .updated-date {
+    font-size: 0.75rem;
+  }
 }

@@ -5,15 +5,20 @@
   margin-top: 2rem;
 }
 
-/* Tablet responsiveness */
+@media (min-width: 1200px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .podcast-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.5rem;
   }
 }
 
-/* Tablet (medium) */
 @media (max-width: 768px) {
   .podcast-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -21,7 +26,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .podcast-grid {
     grid-template-columns: 1fr;
@@ -29,10 +33,8 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 375px) {
   .podcast-grid {
-    grid-template-columns: 1fr;
     gap: 0.8rem;
   }
 }
