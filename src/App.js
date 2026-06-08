@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PodcastGrid from './components/PodcastGrid';
+import LoadingSpinner from './components/LoadingSpinner';
 import './App.css';
 import { genres } from './data';
 
@@ -78,12 +79,7 @@ function App() {
       </header>
 
       <main className="app-main">
-        {loading && (
-          <div className="loading-container">
-            <div className="spinner"></div>
-            <p>Loading podcasts...</p>
-          </div>
-        )}
+        {loading && <LoadingSpinner />}
 
         {error && !loading && (
           <div className="error-container">
